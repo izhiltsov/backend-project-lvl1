@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import { getRandomInt } from '../utils.js';
 
-const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
@@ -17,4 +17,4 @@ const gameData = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(gameData, gameRule);
+export default () => gameEngine(gameData, description);

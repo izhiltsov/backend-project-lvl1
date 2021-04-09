@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import { getRandomInt } from '../utils.js';
 
-const gameRule = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const calculator = (num1, num2, operand) => {
   switch (operand) {
@@ -26,4 +26,4 @@ const gameData = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(gameData, gameRule);
+export default () => gameEngine(gameData, description);

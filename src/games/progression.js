@@ -1,7 +1,7 @@
 import gameEngine from '../index.js';
 import { getRandomInt } from '../utils.js';
 
-const gameRule = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const makeProgression = (length, step) => {
   const progression = [];
@@ -14,10 +14,10 @@ const makeProgression = (length, step) => {
 };
 
 const gameData = () => {
-  const lengthOfProgression = 10; // how many members in progression
-  const step = getRandomInt(10); // step of progression
+  const progressionLength = 10;
+  const step = getRandomInt(10);
 
-  const progression = makeProgression(lengthOfProgression, step);
+  const progression = makeProgression(progressionLength, step);
   const randomIndex = getRandomInt(progression.length - 1);
   const answer = String(progression.splice(randomIndex, 1, '..')[0]);
   const question = progression.join(' ');
@@ -25,4 +25,4 @@ const gameData = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(gameData, gameRule);
+export default () => gameEngine(gameData, description);
