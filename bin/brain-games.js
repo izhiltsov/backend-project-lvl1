@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import { welcome, getUserName } from '../src/cli.js';
+import { getUserName } from '../src/cli.js';
 
-welcome();
-const userrName = getUserName();
-console.log(`Hello, ${userrName}!`);
+getUserName();

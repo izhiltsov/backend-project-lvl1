@@ -1,12 +1,11 @@
 import { getUserAnswer, getUserName } from './cli.js';
 
 const gameEngine = (gameData, gameRule) => {
-  console.log('Welcome to the Brain Games!');
   const userName = getUserName();
-  console.log(`Hello, ${userName}`);
   console.log(gameRule);
 
-  for (let i = 0; i < 3; i += 1) {
+  const playCount = 3;
+  for (let i = 0; i < playCount; i += 1) {
     const [question, correctAnswer] = gameData();
     console.log(`Question: ${question}`);
     const userAnswer = getUserAnswer();
