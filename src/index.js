@@ -1,6 +1,6 @@
 import { getUserAnswer, getUserName } from './cli.js';
 
-const gameEngine = (gameData, gameRule) => {
+const runGame = (gameData, gameRule) => {
   const userName = getUserName();
   console.log(gameRule);
 
@@ -22,4 +22,4 @@ const gameEngine = (gameData, gameRule) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default gameEngine;
+export default runGame;

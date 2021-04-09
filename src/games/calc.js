@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runGame from '../index.js';
 import { getRandomInt } from '../utils.js';
 
 const description = 'What is the result of the expression?';
@@ -13,7 +13,7 @@ const calculator = (num1, num2, operand) => {
   }
 };
 
-const gameData = () => {
+const getGameData = () => {
   const maxRandomNumber = 10;
   const num1 = getRandomInt(maxRandomNumber);
   const num2 = getRandomInt(maxRandomNumber);
@@ -26,4 +26,4 @@ const gameData = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(gameData, description);
+export default () => runGame(getGameData, description);

@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runGame from '../index.js';
 import { getRandomInt } from '../utils.js';
 
 const description = 'What number is missing in the progression?';
@@ -13,7 +13,7 @@ const makeProgression = (length, step) => {
   return progression;
 };
 
-const gameData = () => {
+const getGameData = () => {
   const progressionLength = 10;
   const step = getRandomInt(10);
 
@@ -25,4 +25,4 @@ const gameData = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(gameData, description);
+export default () => runGame(getGameData, description);
